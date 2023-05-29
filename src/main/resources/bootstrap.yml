@@ -1,0 +1,16 @@
+server:
+  port: 19999
+spring:
+  application:
+    name: websocket-demo-starter
+  cloud:
+    nacos:
+      discovery:
+        ip: 192.168.31.219
+      config:
+        file-extension: yaml
+        extension-configs:
+          - { data-id: common.yaml }
+          - { data-id: redis.yaml }
+          - { data-id: rocketmq.yaml }
+      server-addr: 192.168.31.219:8848
